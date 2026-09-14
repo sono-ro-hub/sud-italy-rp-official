@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sud Italy RP — Community Ufficiale</title>
+<meta name="description" content="Sud Italy RP — Community Roleplay su Emergency Hamburg">
+<style>
+:root{
+  --yellow:#ffd447; --white:#f7f8fb; --muted:#b8c0cc; --line:rgba(255,255,255,.12);
+  --panel:rgba(7,12,21,.78); --green:#18d66b; --red:#ff3040;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#05070b;color:var(--white);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,rgba(2,5,10,.92),rgba(2,5,10,.48) 45%,rgba(2,5,10,.7)),url("assets/sfondo.png") center/cover no-repeat;z-index:-3}
+body:after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),#05070b 88%);z-index:-2;pointer-events:none}
+.topline{height:3px;background:linear-gradient(90deg,var(--green),#fff,var(--red))}
+header{position:fixed;top:3px;left:0;right:0;height:78px;z-index:20;background:rgba(4,7,13,.74);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:100%;max-width:1450px;margin:auto;display:flex;align-items:center;gap:24px;padding:0 28px}
+.brand{display:flex;align-items:center;gap:12px;min-width:170px}
+.brand img{width:54px;height:54px;object-fit:contain}
+.brand span{font-weight:900;letter-spacing:2px;font-size:14px}
+.menu{display:flex;align-items:center;justify-content:center;gap:4px;flex:1}
+.menu a{font-size:12px;font-weight:800;letter-spacing:.5px;color:#dfe4eb;padding:30px 14px;position:relative;transition:.25s}
+.menu a:after{content:"";position:absolute;bottom:0;left:14px;right:14px;height:3px;background:var(--yellow);transform:scaleX(0);transition:.25s}
+.menu a:hover,.menu a.active{color:#fff}
+.menu a:hover:after,.menu a.active:after{transform:scaleX(1)}
+.discord{border:1px solid var(--yellow);border-radius:10px;padding:13px 18px;font-weight:900;font-size:12px;white-space:nowrap;transition:.25s}
+.discord:hover{background:var(--yellow);color:#090b0f;box-shadow:0 0 28px rgba(255,212,71,.28)}
+.hero{min-height:900px;max-width:1450px;margin:auto;padding:150px 42px 90px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+.kicker{font-size:12px;letter-spacing:5px;font-weight:900;color:#e9edf3;margin-bottom:22px}
+h1{font-size:clamp(70px,9vw,150px);line-height:.82;letter-spacing:-7px;font-weight:1000;text-transform:uppercase}
+h1 .sud{color:var(--green)} h1 .italy{color:#fff} h1 .rp{color:var(--red)}
+.hero-copy{max-width:620px;margin-top:30px;border-left:4px solid var(--yellow);padding-left:22px;color:#d7dce4;font-size:18px;line-height:1.7}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 24px;border-radius:8px;font-weight:1000;font-size:13px;letter-spacing:.5px;transition:.25s}
+.btn.primary{background:var(--yellow);color:#080a0e}.btn.secondary{border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.25)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,.3)}
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-art:before{content:"";position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(255,212,71,.23),transparent 65%);filter:blur(15px)}
+.hero-art img{width:min(100%,560px);position:relative;filter:drop-shadow(0 24px 35px rgba(0,0,0,.65));animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(1deg)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:1450px;margin:-35px auto 0;padding:0 42px;background:rgba(255,255,255,.07)}
+.stat{padding:26px 18px;background:rgba(5,8,14,.78);text-align:center}
+.stat strong{display:block;font-size:30px;color:var(--yellow);font-weight:1000}.stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+main{background:linear-gradient(180deg,rgba(5,7,11,.75),#05070b 20%);padding-top:80px}
+.wrap{max-width:1450px;margin:auto;padding:0 42px}
+.section{padding:95px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:4px;color:var(--yellow);font-weight:900;margin-bottom:15px}
+h2{font-size:clamp(36px,5vw,70px);letter-spacing:-2px;line-height:1;margin-bottom:18px}
+.lead{color:var(--muted);max-width:700px;line-height:1.8}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start}
+.manifesto{font-size:clamp(25px,3vw,43px);font-weight:900;line-height:1.15;color:#fff}
+.manifesto em{color:var(--yellow);font-style:normal}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 20px 70px rgba(0,0,0,.22)}
+.panel p{color:#c8ced8;line-height:1.8;margin-bottom:18px}
+.panel p:last-child{margin-bottom:0}
+.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:35px}
+.group{padding:25px;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:14px;transition:.25s}
+.group:hover{transform:translateY(-5px);border-color:rgba(255,212,71,.6)}
+.group h3{font-size:19px;margin-bottom:15px}.group h3:before{content:"✦";color:var(--yellow);margin-right:9px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;color:#d8dee7;border:1px solid rgba(255,255,255,.13);padding:8px 10px;border-radius:7px;background:rgba(0,0,0,.18)}
+.story{display:grid;grid-template-columns:240px 1fr;gap:45px}
+.chapter{position:sticky;top:110px;height:max-content}.chapter strong{font-size:52px;color:var(--yellow);display:block}.chapter span{color:var(--muted);font-size:12px;line-height:1.6}
+.story-text{max-width:850px}.story-text h3{font-size:32px;margin-bottom:25px}.story-text p{color:#cdd3dd;line-height:1.9;margin:0 0 22px}.quote{border-left:4px solid var(--yellow);padding:20px 25px;margin-top:28px;background:rgba(255,212,71,.05);font-size:25px;font-weight:900}
+.company-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:35px}
+.company{min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:12px;font-size:13px;font-weight:1000;letter-spacing:.5px;transition:.25s}
+.company:hover{border-color:var(--yellow);transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,.25)}
+.link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}
+.link-card{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:25px;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:14px;transition:.25s}
+.link-card:hover{border-color:var(--yellow);transform:translateY(-4px)}.link-card small{display:block;color:var(--muted);margin-top:7px}.arrow{color:var(--yellow);font-size:24px}
+footer{border-top:1px solid var(--line);padding:35px 42px;color:#8f98a6;text-align:center;font-size:12px}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:1000px){.menu{display:none}.hero,.split,.story{grid-template-columns:1fr}.hero{padding-top:135px;min-height:auto}.hero-art{order:-1}.hero-art img{max-width:360px}.company-grid{grid-template-columns:repeat(2,1fr)}.link-grid{grid-template-columns:1fr}.chapter{position:static}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){header{height:68px}.nav{padding:0 16px}.brand img{width:45px;height:45px}.brand span{font-size:11px}.discord{padding:10px 12px;font-size:10px}.hero,.wrap{padding-left:20px;padding-right:20px}.hero{padding-top:110px}.kicker{letter-spacing:3px;font-size:10px}h1{font-size:64px;letter-spacing:-4px}.hero-copy{font-size:15px}.stats{padding:0 20px}.stat{padding:20px 8px}.stat strong{font-size:24px}.section{padding:65px 0}.groups{grid-template-columns:1fr}.company-grid{grid-template-columns:1fr 1fr}.panel{padding:22px}footer{padding:28px 20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home"><img src="assets/logo.gif" alt="Logo Sud Italy RP"><span>SUD ITALY RP</span></a>
+    <div class="menu">
+      <a href="#home" class="active">HOME</a><a href="#chi-siamo">CHI SIAMO</a><a href="#reparti">REPARTI</a><a href="#aziende">AZIENDE</a><a href="#storia">STORIA</a><a href="#community">COMMUNITY</a><a href="#collegamenti">COLLEGAMENTI</a>
+    </div>
+    <a class="discord" href="https://discord.gg/suditalyrp" target="_blank" rel="noopener">DISCORD →</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="reveal">
+    <div class="kicker">ROLEPLAY · PASSIONE · COMUNITÀ</div>
+    <h1><span class="sud">SUD</span><br><span class="italy">ITALY</span> <span class="rp">RP</span></h1>
+    <p class="hero-copy">Entra a far parte di una community di Roblox ambientata su Emergency Hamburg. Qui la tua storia inizia davvero: divertimento, rispetto e roleplay.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://discord.gg/suditalyrp" target="_blank" rel="noopener">🎮 ENTRA NEL DISCORD →</a>
+      <a class="btn secondary" href="#chi-siamo">ⓘ CHI SIAMO →</a>
+    </div>
+  </div>
+  <div class="hero-art reveal"><img src="assets/logo.gif" alt="Sud Italy RP"></div>
+</section>
+
+<div class="stats">
+  <div class="stat"><strong>3500+</strong><span>membri</span></div>
+  <div class="stat"><strong>DAL 2025</strong><span>community attiva</span></div>
+  <div class="stat"><strong>RP</strong><span>su Roblox</span></div>
+  <div class="stat"><strong>24/7</strong><span>passione e rispetto</span></div>
+</div>
+
+<main>
+<div class="wrap">
+<section id="chi-siamo" class="section reveal">
+  <div class="eyebrow">01 / IL PROGETTO</div>
+  <div class="split">
+    <div><h2>Più di un semplice server.</h2><p class="lead">Siamo una community italiana dedicata al roleplay su Roblox, ambientata su Emergency Hamburg. Il nostro obiettivo è offrire un'esperienza coinvolgente, ordinata e divertente, mettendo la community al centro.</p></div>
+    <div class="panel"><p>Lo Staff lavora per assistere i membri, mantenere un ambiente piacevole e permettere a tutti di vivere il proprio roleplay nel rispetto delle regole.</p><p>Prima il divertimento dei nuovi arrivati, poi tutto il resto: Sud Italy RP nasce per costruire storie insieme.</p></div>
+  </div>
+</section>
+
+<section id="reparti" class="section reveal">
+  <div class="eyebrow">02 / ORGANIZZAZIONE</div><h2>Reparti e professioni</h2><p class="lead">Scegli il tuo percorso e costruisci il tuo ruolo all'interno della community.</p>
+  <div class="groups">
+    <div class="group"><h3>Forze dell'Ordine</h3><div class="tags"><span class="tag">Polizia di Stato</span><span class="tag">NOCS</span><span class="tag">Polizia Locale</span><span class="tag">N.O.S.</span><span class="tag">Carabinieri</span><span class="tag">GIS</span><span class="tag">Guardia di Finanza</span><span class="tag">GICO</span><span class="tag">Polizia Penitenziaria</span><span class="tag">Esercito</span><span class="tag">4° Reggimento Ranger</span><span class="tag">Marina Militare</span></div></div>
+    <div class="group"><h3>Servizi e attività</h3><div class="tags"><span class="tag">HARS</span><span class="tag">Medico</span><span class="tag">Vigile del Fuoco</span><span class="tag">Camionista</span><span class="tag">Autista dei Bus</span><span class="tag">Gang</span><span class="tag">Avvocati</span><span class="tag">Giudici</span></div></div>
+  </div>
+</section>
+
+<section id="aziende" class="section reveal">
+  <div class="eyebrow">03 / ECONOMIA</div><h2>Aziende</h2><p class="lead">Attività, servizi e imprese che rendono vivo il mondo di Sud Italy RP.</p>
+  <div class="company-grid">
+    <div class="company">BANCA</div><div class="company">GIOIELLERIA</div><div class="company">CLUB</div><div class="company">GAS-N-GO-FUEL</div><div class="company">ARES-FUEL</div><div class="company">OSSO-FUEL</div><div class="company">TOOL-SHOP</div><div class="company">FARM-SHOP</div><div class="company">CLOTHING-STORE</div><div class="company">INTERSTATE-TRANSPORT-CO</div>
+  </div>
+</section>
+
+<section id="storia" class="section reveal">
+  <div class="eyebrow">04 / DAL 12 LUGLIO 2025</div>
+  <div class="story">
+    <aside class="chapter"><strong>3500+</strong><span>Una community costruita con costanza, difficoltà e rinascite.</span></aside>
+    <article class="story-text">
+      <h3>La storia di Sud Italy</h3>
+      <p>Sud Italy nasce ufficialmente il 12 luglio 2025. All’inizio era una semplice beta e, dopo circa due settimane, eravamo solamente 17 membri.</p>
+      <p>Poi arrivò il primo grande problema: il server venne nukkato. Sembrava la fine di Sud Italy, ma decisi di non mollare. Cercai aiuto in diversi server Discord, ma non trovai nessuno. Così, il 5 agosto 2025, decisi di provare a ricostruirlo da solo.</p>
+      <p>Non sapevo nemmeno creare bene i canali, ma piano piano imparai. Giorno dopo giorno, Sud Italy iniziò a crescere.</p>
+      <p>Nelle prime due settimane arrivammo a 100 membri, raggiungendo anche il full. Successivamente arrivammo fino a 260 membri. Sembrava tutto perfetto.</p>
+      <p>Ma il 1° settembre 2025 cambiò tutto.</p>
+      <p>Nel server in-game non entrava più nessuno e Discord iniziò a svuotarsi. Da 260 membri passammo a 216. Questo periodo durò fino al 22 ottobre 2025.</p>
+      <p>Durante quei mesi io, Rafus e Andromeda cercavamo continuamente nuove idee per rianimare la community. Arrivammo persino a cambiare nome in Gaming Italy, cercando di rappresentare più giochi.</p>
+      <p>Poi arrivò il 22 ottobre.</p>
+      <p>Quella mattina mi svegliai con una sensazione: sentivo che quello sarebbe stato il giorno giusto.</p>
+      <p>Facemmo una votazione chiedendo alla community se volesse il ritorno di Sud Italy.</p>
+      <p>Tutti votarono sì.</p>
+      <p>Così Sud Italy tornò online.</p>
+      <p>Dopo soli 20 minuti eravamo già 30 persone, poi 40. Da quel momento la community iniziò a tornare e Sud Italy rinacque.</p>
+      <p>In quel periodo ero il founder principale, ma decisi di rendere Andromeda fondatrice del progetto, perché era sempre stata al mio fianco e aveva continuato a supportare Sud Italy anche nei momenti peggiori.</p>
+      <p>Successivamente inserimmo anche Rafus come CEO, fondamentale per la rinascita del progetto.</p>
+      <p>Per questo il 22 ottobre 2025 è una data speciale.</p>
+      <p>È il giorno in cui Sud Italy è passato dall’inferno al paradiso.</p>
+      <div class="quote">Credete sempre in quello che fate.<br>Se attraversate un periodo brutto, non mollate.</div>
+      <p>Sud Italy ne è la prova.</p>
+      <p>Grazie a chi c’era dall’inizio, a chi è rimasto, a chi è tornato e a chi continua a credere in noi.</p>
+      <p>Questa non è la fine.<br>È solo l’inizio.</p>
+      <p><strong>Grazie Sud Italy ❤️</strong></p>
+    </article>
+  </div>
+</section>
+
+<section id="community" class="section reveal">
+  <div class="eyebrow">05 / COMMUNITY</div><h2>Una famiglia, dentro e fuori dal gioco.</h2>
+  <div class="split"><p class="manifesto">Non è solo un gioco.<br><em>È la nostra realtà.</em></p><div class="panel"><p>Agenti disciplinati, staff disponibile e membri pronti a condividere nuove esperienze. Se vuoi entrare in un progetto in crescita, apri un ticket e vieni a conoscerci.</p><p>Per reparti, Forze Speciali, bandi Giudice o Avvocato e informazioni generali, il nostro Discord è il punto di partenza.</p></div></div>
+</section>
+
+<section id="collegamenti" class="section reveal">
+  <div class="eyebrow">06 / COLLEGAMENTI</div><h2>Tutti i nostri link.</h2><p class="lead">Apri direttamente il collegamento che ti interessa.</p>
+  <div class="link-grid">
+    <a class="link-card" href="https://discord.gg/suditalyrp" target="_blank" rel="noopener"><div><b>Discord principale</b><small>Sud Italy RP</small></div><span class="arrow">→</span></a>
+    <a class="link-card" href="https://discord.gg/qbGXZK6HyV" target="_blank" rel="noopener"><div><b>Server F.d.O.</b><small>Forze dell'Ordine</small></div><span class="arrow">→</span></a>
+    <a class="link-card" href="https://discord.gg/eeD3kYqASh" target="_blank" rel="noopener"><div><b>UDS</b><small>🚑🚒 Servizi e soccorso</small></div><span class="arrow">→</span></a>
+    <a class="link-card" href="https://discord.gg/qVcsYqPhuw" target="_blank" rel="noopener"><div><b>INTERSTATE TRANSPORT CO</b><small>Trasporti / Truck</small></div><span class="arrow">→</span></a>
+    <a class="link-card" href="https://www.tiktok.com/@sud.italy.rp1?_r=1&_t=ZN-99DKVXEE2j4" target="_blank" rel="noopener"><div><b>TikTok</b><small>@sud.italy.rp1</small></div><span class="arrow">→</span></a>
+  </div>
+</section>
+</div>
+</main>
+<footer>© 2025–2026 Sud Italy RP · Roleplay Community · Tutti i diritti riservati.</footer>
+<script>
+const observer = new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const sections=[...document.querySelectorAll('main section, #home')], links=[...document.querySelectorAll('.menu a')];
+window.addEventListener('scroll',()=>{let current='home'; sections.forEach(s=>{if(scrollY>=s.offsetTop-180) current=s.id}); links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))});
+</script>
+</body>
+</html>
